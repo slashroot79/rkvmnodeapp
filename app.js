@@ -14,7 +14,8 @@ app.use((req, res, next) => {
     timestamp: new Date().toISOString(),
     method: req.method,
     url: req.originalUrl,
-    headers: req.headers,
+    client: req.headers.host,
+    api: req.headers.url,
     body: req.body || {}
   };
 
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
       responseTimeMs: duration
     };
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
+    fs.appendFileSync(logFile, "****************************************************************\n");
   });
 
   next();
