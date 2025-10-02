@@ -61,6 +61,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal Server Error', details: err.message });
 });
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log(`VM API server running on port ${port}`);
 });
