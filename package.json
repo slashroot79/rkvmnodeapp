@@ -1,0 +1,14 @@
+{
+  "name": "vmnodeapp",
+  "version": "1.0.0",
+  "description": "Sample VM app to test downstream calls from  Azure App Service Linux",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ragu Karuturi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
